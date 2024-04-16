@@ -1,1 +1,52 @@
+10/03/2024
+
+SQL is a human-like language used to manage and structure the records in your database (file closet).
+
+query: way of requesting information, asking a question, inquiring, or making a request.
+
+We used a query to ask for information from the database.
+
+RDMS: relational database management system. data related to each other. stored in table format.
+
+https://www.mysqltutorial.org/getting-started-with-mysql/mysql-sample-database/
+
+For those who find it hard to upload data, we also have a simple way to upload data to our MySQL.
+
+select name, district, population from world.city 
+
+where district = 'Herat';
+
+select * from world.city 
+-- customer is my table (room) and classicmodels is my schema(apartment).
+where name = 'Karachi';
+
+
+select * from world.city 
+-- customer is my table (room) and classicmodels is my schema(apartment).
+where name = 'Karachi';
+
+The view contains rows and columns the same as the table; we can see but not edit without permission of admin
+
+USE Poshem_cohort3; -- this ensures that yout code is executured in this DB
+
+/* Create the tables */
+
+CREATE TABLE Department (
+
+  departmentID varchar(50) NOT NULL,
+
+  DepartmentDescription varchar(4000) DEFAULT NULL,
+
+  Departmentfloor numeric(5) NOT NULL,
+
+  DepartmentName varchar(50) NULL,
+
+  PRIMARY KEY (Departmentid)
+
+);
+
+select * from world.city where CountryCode == 'AFG'
+
+select * from world.city where Population < 23000;
+
 

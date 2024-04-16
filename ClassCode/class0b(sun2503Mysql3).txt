@@ -1,0 +1,132 @@
+This is the code we covered in the last class:
+
+-- CREATE DATABASE Bank_Info;
+
+USE Bank_Info;
+
+-- CREATE TABLE Customer_Info (
+--     CustomerId INT NOT NULL,
+--     FirstName CHARACTER(25) NOT NULL,
+--     MiddleName CHARACTER(25) NOT NULL,
+--     LastName CHARACTER(25) NOT NULL,
+--     DOB DATETIME(6) NULL,
+--     PRIMARY KEY( CustomerId)
+-- );
+
+SELECT 
+    *
+FROM
+    Customer_Info;
+    
+INSERT INTO bank_info.customer_info
+
+(`customerID`,
+
+`FirstName`,
+
+`MiddleName`,
+
+`LastName`,
+
+`DOB`)
+
+VALUES
+
+('001',
+
+'Ikenna',
+
+'Jaffri',
+
+'Olamide',
+
+'2024-03-22 00:00:00');
+
+INSERT INTO bank_info.customer_info
+
+(`customerID`,
+
+`FirstName`,
+
+`MiddleName`,
+
+`LastName`,
+
+`DOB`)
+
+VALUES
+
+('007', 'Gina', ' ','Moses', '2029-03-22 00:00:00'),
+
+('009', 'Daivd', 'M','Zibiri', '2029-04-22 00:00:00'),
+
+('003', 'Taiwo', '0 ','Richard', '2029-03-22 00:00:00'),
+
+('004', 'Genesis', 'D ','Chris', '2029-03-22 00:00:00'),
+
+('005', 'Allen', 'J ','Jackson', '2029-03-22 00:00:00');
+    
+    
+-- select * from bank_info.customer_info where FirstName = 'Gina'
+
+select distinct FirstName from bank_info.customer_info;
+
+-- INSERT INTO bank_info.customer_info
+
+-- (`customerID`,
+
+-- `FirstName`,
+
+-- `MiddleName`,
+
+-- `LastName`,
+
+-- `DOB`)
+--     
+-- VALUES
+
+-- ('010',
+
+-- 'Noah',
+
+-- ' ',
+
+-- 'Jafri',
+
+-- '2024-03-22');
+
+select * from bank_info.customer_info where FistName = 'Noah';
+
+
+use mavenmovies;
+
+-- select * from mavenmovies.actor;
+
+-- select * from mavenmovies.actor
+-- where first_name = 'PENELOPE';
+
+-- select * from mavenmovies.actor_award
+
+-- where awards In ('Tony', 'Emmy','Oscar');
+
+-- select * from mavenmovies.actor_award
+-- where awards like 'T%' or 'E%' or 'O%';
+
+
+-- select * from mavenmovies.film
+-- where description like '%fateful%';
+
+--  select * from mavenmovies.film
+-- -- where title like 'B%' and description like '%boring%' and release_year <= 2010 ;
+-- where title like 'Baby%'
+
+-- select * from mavenmovies.actor
+-- where first_name like 'N%';
+
+select first_name, last_name from mavenmovies.actor
+where first_name like 'N%' and last_name like 'H%'
+
+
+DML: data manipulation language
+
+SELECT − Retrieve data from the database. INSERT − Insert data into a table. UPDATE − Update existing data within a table. DELETE − Delete records from a database table
